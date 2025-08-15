@@ -13,7 +13,6 @@ from app.models.base import Base
 class User(SQLAlchemyBaseUserTableUUID, Base):
     """
     - 继承自FastAPI Users的基础用户表
-    - 包含用户的基本信息和CRUD操作
     - FastAPI Users已经实现了大部分用户相关的功能，不做额外修改,后期如果业务需要可以：diy相关逻辑
     - 独立出来使用依赖注入获取用户数据
     """
