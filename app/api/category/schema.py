@@ -1,17 +1,21 @@
 from pydantic import BaseModel
 from typing import List, Optional
 
+
 class CategoryBase(BaseModel):
     name: str
+
 
 class CategoryCreate(CategoryBase):
     pass
 
+
 class CategoryUpdate(BaseModel):
     name: Optional[str] = None
 
+
 class CategoryOut(CategoryBase):
     id: int
-    # name: str
+
     class Config:
         from_attributes = True
